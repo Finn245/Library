@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'RobotoBold';
+    src: url("./Roboto/Roboto-Bold.ttf");
+}
+@font-face {
+    font-family: 'LightText';
+    src: url("./Roboto/Roboto-Light.ttf");
+}
+
+:root {
+    --main-font: 'RobotoBold', sans-serif;
+    --text-font: 'LightText', sans-serif;
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color:#e4e4e7;
+    gap: 4px;
+}
+
+section {
+    width: 100%;
+    flex-grow: 1; /* Allow section to grow to fill available space */
+    overflow-y: auto; /* Enable vertical scroll if needed */
+    font-family: var(--text-font);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+
+
+.header-container {
+    width: 100%;
+    height: 15%;
+    background-color: #4CAF50;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #fff;
+    margin: 0;
+    font-size: 3rem;
+    font-family: var(--main-font);
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#new-book-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#new-book-btn:hover {
+    background-color: #fff;
+    color: #4CAF50;
+}
+
+.footer-container {
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+    font-family: var(--text-font);
+}
+
+.footer-container div {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.footer-container img {
+    width: 35px; 
+    transition: transform 0.3s ease; 
+    cursor: pointer;
+}
+
+.footer-container img:hover {
+    transform: scale(1.2); 
+}
+
+/* Add these styles to your existing CSS file */
+
+#form {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    margin-bottom: 8px;
+    display: inline-block;
+    width: 80%;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 80%;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+input[type="submit"]:hover {
+    background-color: #fff;
+    color: #4CAF50 ;
+}
+.book-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-items: center;
+    width: 100%;
+    gap: 50px;
+    position: relative;
+}
+.book {
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-left:5px solid #4CAF50;
+    gap: 15px;
+    padding: 15px;
+    width: 320px;
+    height: 320px;
+    gap: 15px;
+    border-radius: 10px;
+    box-shadow: 4px 10px 20px rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem;
+}
+
+.book-title,
+.book-author,
+.book-pages,
+.book-read {
+    margin-bottom: 5px;
+}
+#title-error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+#title.duplicate {
+    border-color: red;
+}
+
+
+
+
+
+/* Styling for the buttons */
+.book-container button.remove-btn {
+    padding: 8px 16px;
+    margin-top: 10px;
+    background-color: #f84b4b; /* Red color for Remove button */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.book-container button.toggle-btn {
+    padding: 8px 16px;
+    margin-top: 10px;
+    background-color: #4CAF50; /* Blue color for Toggle button */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1.5rem;
+}
+
+/* Hover effect for the buttons */
+.book-container button.remove-btn:hover {
+    background-color: #820404; /* Darker red on hover */
+}
+
+.book-container button.toggle-btn:hover {
+    background-color: #115e59; /* Darker blue on hover */
+}
+
+
+
+
+
+
